@@ -10,7 +10,7 @@ import { validateArgs } from "./service.mjs";
 const argv = yargs(hideBin(process.argv))
   .scriptName("local-lambda-api")
   .usage("Usage: $0 [filename(.js|.mjs|.cjs)] [options]")
-  .example("$0 handler.js", "Run the local API server using handler.js as the Lambda API handler")
+  .example("$0 index.js", "Run the local API server using index.js as the Lambda API handler")
   .help("h")
   .alias("h", "help")
   .option("p", {
@@ -91,11 +91,11 @@ app.all("*", async (req, res) => {
     console.log(colorFn(`${req.method} ${req.path} (${lambdaResponse.statusCode})`));
     res.status(lambdaResponse.statusCode).json(JSON.parse(lambdaResponse.body));
   } catch (error) {
-    console.error("Error calling Lambda handler", error);
+    console.error("Error calling lambda handler", error);
     res.status(500).send("Internal Server Error");
   }
 });
 
 app.listen(port, () => {
-  console.log(`Local API server running at http://localhost:${port}`);
+  console.log(`Local lambda API server running at http://localhost:${port}`);
 });

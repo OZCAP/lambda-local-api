@@ -37,6 +37,6 @@ Options:
       --b64           Set event.isBase64Encoded to true                [boolean]
 
 Examples:
-  local-lambda-api handler.js  Run the local API server using handler.js as the
-                               Lambda API handler
+  local-lambda-api index.js  Run the local API server using index.js as the
+                               lambda API handler
 ```
