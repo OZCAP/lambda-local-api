@@ -6,7 +6,8 @@
   "bin": "./src/cli.mjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "changeset": "changeset"
+    "changeset": "changeset",
+    "lint": "eslint"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +22,7 @@
     "@changesets/cli": "^2.27.1",
     "@types/express": "^4.17.21",
     "@types/yargs": "^17.0.32",
+    "eslint": "^8.57.0",
     "prettier": "^3.2.5",
     "typescript": "^5.4.3"
   }
