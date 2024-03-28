@@ -7,7 +7,7 @@ Lightweight express-based wrapper for running lambda API gateways locally. This 
 While developing APIs locally using AWS SAM, you will likely run into the following annoying issues:
 
 1. Slow — AWS SAM relies on spinning up a Docker container to run lambda function. This can take a long time to start up and restart between changes.
-1. Blocking — AWS SAM spins up a single docker container to handle one request at a time. This can be a problem if you are testing a service that requires multiple requests to be made concurrently.
+1. Blocking — AWS SAM runs one docker container to handle a single request at a time. This can be a problem if you are testing a service that requires multiple requests to be made concurrently.
 
 ## Installation
 
