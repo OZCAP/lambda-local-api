@@ -51,7 +51,7 @@ app.all("*", async (req, res) => {
     path: req.path,
     headers: req.headers,
     queryStringParameters: req.query,
-    body: body,
+    body: typeof req.body === "object" ? JSON.stringify(req.body) : req.body,
     isBase64Encoded: b64,
     rawQueryString: rawQueryString,
     cookies: req.cookies,
