@@ -1,5 +1,11 @@
 # local-lambda-api
 
+## 1.0.3
+
+### Patch Changes
+
+- 1125d4b: Fix deploymenty
+
 ## 1.0.2
 
 ### Patch Changes
