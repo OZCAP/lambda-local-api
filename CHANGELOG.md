@@ -1,5 +1,11 @@
 # local-lambda-api
 
+## 1.1.1
+
+### Patch Changes
+
+- 9a19c36: fix body parse
+
 ## 1.1.0
 
 ### Minor Changes
