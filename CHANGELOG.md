@@ -1,5 +1,11 @@
 # local-lambda-api
 
+## 1.0.2
+
+### Patch Changes
+
+- 8b5356e: Update text literals
+
 ## 1.0.1
 
 ### Patch Changes
