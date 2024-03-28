@@ -1,5 +1,11 @@
 # local-lambda-api
 
+## 1.1.2
+
+### Patch Changes
+
+- 329d426: fix
+
 ## 1.1.1
 
 ### Patch Changes
