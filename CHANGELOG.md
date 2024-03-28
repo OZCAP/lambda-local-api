@@ -1,5 +1,11 @@
 # local-lambda-api
 
+## 1.1.0
+
+### Minor Changes
+
+- 80c38bb: Fix parse error on non-json body
+
 ## 1.0.3
 
 ### Patch Changes
