@@ -38,11 +38,10 @@ app.all("*", async (req, res) => {
   const rawQueryString = queryIndex >= 0 ? req.originalUrl.slice(queryIndex + 1) : "";
 
   const body = (() => {
-    try {
-      return JSON.parse(req.body);
-    } catch (e) {
-      return req.body;
+    if (typeof req.body === "object") {
+      return JSON.stringify(req.body)
     }
+    return req.body;
   })();
 
   const event = {
@@ -51,7 +50,7 @@ app.all("*", async (req, res) => {
     path: req.path,
     headers: req.headers,
     queryStringParameters: req.query,
-    body: typeof req.body === "object" ? JSON.stringify(req.body) : req.body,
+    body: body,
     isBase64Encoded: b64,
     rawQueryString: rawQueryString,
     cookies: req.cookies,
