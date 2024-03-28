@@ -1,5 +1,11 @@
 # local-lambda-api
 
+## 1.0.1
+
+### Patch Changes
+
+- a16387b: Add release script
+
 ## 1.0.0
 
 ### Major Changes
