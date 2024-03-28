@@ -5,7 +5,7 @@ import yargs from "yargs/yargs";
 import { hideBin } from "yargs/helpers";
 import chalk from "chalk";
 import { readFile } from "fs/promises";
-import { validateArgs } from "./service.mjs";
+import { DEFAULTS, validateArgs } from "./service.mjs";
 
 const argv = yargs(hideBin(process.argv))
   .scriptName("local-lambda-api")
@@ -15,7 +15,7 @@ const argv = yargs(hideBin(process.argv))
   .alias("h", "help")
   .option("p", {
     alias: "port",
-    describe: "Port to run the API server on",
+    describe: `Port to run the API server on (default: ${DEFAULTS.PORT})`,
     type: "number"
   })
   .option("defaultEvent", {

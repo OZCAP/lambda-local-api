@@ -1,8 +1,8 @@
 import chalk from "chalk";
 import { z } from "zod";
 
-const DEFAULTS = {
-  PORT: 3000,
+export const DEFAULTS = {
+  PORT: 4000,
   BASE_64_ENCODED: false,
   DEFAULT_EVENT_PATH: "./defaultEvent.json"
 };
