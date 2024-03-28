@@ -37,17 +37,25 @@ app.all("*", async (req, res) => {
   const queryIndex = req.originalUrl.indexOf("?");
   const rawQueryString = queryIndex >= 0 ? req.originalUrl.slice(queryIndex + 1) : "";
 
+  const body = (() => {
+    try {
+      return JSON.parse(req.body);
+    } catch (e) {
+      return req.body;
+    }
+  })();
+
   const event = {
     ...baseEvent,
     httpMethod: req.method,
     path: req.path,
     headers: req.headers,
     queryStringParameters: req.query,
-    body: req.body && (!b64 ? JSON.stringify(req.body) : req.body),
+    body: body,
     isBase64Encoded: b64,
     rawQueryString: rawQueryString,
     cookies: req.cookies,
-    reqestContext: {
+    requestContext: {
       http: {
         method: req.method,
         path: req.path,
